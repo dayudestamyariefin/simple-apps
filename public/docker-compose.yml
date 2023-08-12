@@ -1,0 +1,12 @@
+services:
+  apps-rafi:
+    build: .
+    container_name: web-apps-dayu
+    ports:
+      - "80:3000"
+    image: "dayudestamyariefin/apps-dayu"
+    volumes:
+      - vol-apps:/app/public/images
+
+volumes:
+ vol-apps:
