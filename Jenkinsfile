@@ -33,7 +33,9 @@ pipeline {
         }
         stage('Deploy Apps') {
             steps {
-                echo 'Deploy Apps'
+                sh '''
+                docker compose up -d
+                '''
             }
         }
         stage('Push Image') {
